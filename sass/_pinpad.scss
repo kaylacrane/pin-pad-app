@@ -1,0 +1,166 @@
+@use 'variables';
+@use "mixins";
+
+$color-display: #5D6A69;
+
+.pinpad {
+    &__back {
+        width: 300px;
+        height: 457px;
+        left: 30px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+
+        background: linear-gradient(270deg, #222B3D 0%, #6A758B 100%);
+        box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(0, 0, 0, 0.7), inset 0px -14px 0px #161C27;
+        border-radius: 18px;
+
+        @include mixins.desktop {
+            width: 380px;
+            height: 580px; 
+        }
+    }
+
+    &__front {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 268.42px;
+        max-height: 445.97px;
+    
+        background: #364157;
+        border-width: 1px 1px 1px 0px;
+        border-style: solid;
+        border-color: #68748A;
+
+        @include mixins.desktop {
+            max-width: 100%;
+            max-height: 100%; 
+            margin: 0 20px 14px;
+        }
+    }
+
+    &__screen {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 238.42px;
+        height: 92.98px;
+        margin: 21.27px auto;
+        background: #E5F3F2;
+        border: 2px solid #242D3F;
+        box-shadow: inset 0px 3px 6px 3px rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        gap: 15px;
+
+        @include mixins.desktop {
+            width: 302px;
+            height: 118px;
+        }
+
+        &.incorrect-input {
+            background: #FFE4E4;
+        }
+
+        &-text {
+            background: transparent;
+            border: none;
+            max-width: 70%;
+        
+            font-family: variables.$font-digitalDisplay;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 50px;
+        
+            color: $color-display;
+            overflow: visible;
+            text-align: center;
+            
+            @include mixins.desktop {
+                font-size: 64px;
+                line-height: 64px;
+            }
+
+            &.success-message {
+                max-width: 100%;
+            }
+        }
+    
+        &-visibility {
+            color: $color-display;
+            font-size: 30px;
+            border: none;
+            background-color: transparent;
+            
+            @include mixins.desktop {
+                font-size: 36px;
+            }
+    
+            &.no-visibility {
+                display: none;
+            }
+        }
+    }
+
+    &__numbers {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 14.97px 15px;
+
+        @include mixins.desktop {
+            gap: 19px 16px;
+        }
+    
+
+        &-button {
+            background: linear-gradient(180deg, #414D66 0%, #161C27 100%);
+            border: 2px solid rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 0px 0px 3px rgba(211, 226, 255, 0.19), inset 0px 0px 5px 2px rgba(105, 136, 198, 0.3);
+            border-radius: 6px;
+            
+            width: 71.05px;
+            height: 61.46px;
+        
+            font-family: variables.$font-main;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 33px;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            color: #FFFFFF;
+            text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+
+            @include mixins.desktop {
+                width: 90px;
+                height: 78px;
+                font-size: 40px;
+            }
+
+            &.button-red {
+                background: linear-gradient(180deg, #EF6476 0%, #CF5060 100%);
+            }
+            
+            &.button-green {
+                background: linear-gradient(180deg, #6AECB0 0%, #42A484 100%);
+            }
+
+            &:active {
+                background: linear-gradient(180deg, #7488B1 0%, #3F506E 100%);
+                border: 1px solid rgba(0, 0, 0, 0.7);
+                box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 1px 5px 2px rgba(48, 53, 65, 0.56);
+            }
+        }
+        
+    }
+}

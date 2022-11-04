@@ -1,0 +1,12 @@
+{
+  "liveSassCompile.settings.rootIsWorkspace": null,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "./styles",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveSassCompile.settings.forceBaseDirectory": ""
+}

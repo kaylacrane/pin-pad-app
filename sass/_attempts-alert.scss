@@ -1,0 +1,27 @@
+@use 'variables';
+@use "mixins";
+
+.attempts-alert {
+    box-sizing: border-box;
+    position:fixed;
+    width: 100vw;
+    background: variables.$color-alert-background;
+    border-bottom: 2px solid #C2AF03;
+    font-family: variables.$font-main;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+
+    &__message {
+        max-width: 300px;
+        margin: 9px auto 10px;
+
+        @include mixins.desktop {
+            max-width: 80%;
+            font-size: 30px;
+            line-height: 38px;  
+        }
+    }
+}

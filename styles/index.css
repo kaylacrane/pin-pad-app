@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("../assets/AdobeClean-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Adobe Clean";
+  font-weight: bold;
+  src: url("../assets/AdobeClean-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Adobe Clean";
+  font-weight: medium;
+  src: url("../assets/AdobeClean-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "DS-Digital";
+  src: url("../assets/ds-digital.otf") format("opentype");
+}
+* {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.background {
+  background-image: url("../assets/background-wall.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.attempts-alert {
+  box-sizing: border-box;
+  position: fixed;
+  width: 100vw;
+  background: #FFD600;
+  border-bottom: 2px solid #C2AF03;
+  font-family: "Adobe Clean";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+}
+.attempts-alert__message {
+  max-width: 300px;
+  margin: 9px auto 10px;
+}
+@media all and (min-width: 1000px) {
+  .attempts-alert__message {
+    max-width: 80%;
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+.pinpad__back {
+  width: 300px;
+  height: 457px;
+  left: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(270deg, #222B3D 0%, #6A758B 100%);
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(0, 0, 0, 0.7), inset 0px -14px 0px #161C27;
+  border-radius: 18px;
+}
+@media all and (min-width: 1000px) {
+  .pinpad__back {
+    width: 380px;
+    height: 580px;
+  }
+}
+.pinpad__front {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 268.42px;
+  max-height: 445.97px;
+  background: #364157;
+  border-width: 1px 1px 1px 0px;
+  border-style: solid;
+  border-color: #68748A;
+}
+@media all and (min-width: 1000px) {
+  .pinpad__front {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 20px 14px;
+  }
+}
+.pinpad__screen {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 238.42px;
+  height: 92.98px;
+  margin: 21.27px auto;
+  background: #E5F3F2;
+  border: 2px solid #242D3F;
+  box-shadow: inset 0px 3px 6px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  gap: 15px;
+}
+@media all and (min-width: 1000px) {
+  .pinpad__screen {
+    width: 302px;
+    height: 118px;
+  }
+}
+.pinpad__screen.incorrect-input {
+  background: #FFE4E4;
+}
+.pinpad__screen-text {
+  background: transparent;
+  border: none;
+  max-width: 70%;
+  font-family: "DS-Digital";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  color: #5D6A69;
+  overflow: visible;
+  text-align: center;
+}
+@media all and (min-width: 1000px) {
+  .pinpad__screen-text {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+.pinpad__screen-text.success-message {
+  max-width: 100%;
+}
+.pinpad__screen-visibility {
+  color: #5D6A69;
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+}
+@media all and (min-width: 1000px) {
+  .pinpad__screen-visibility {
+    font-size: 36px;
+  }
+}
+.pinpad__screen-visibility.no-visibility {
+  display: none;
+}
+.pinpad__numbers {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14.97px 15px;
+}
+@media all and (min-width: 1000px) {
+  .pinpad__numbers {
+    gap: 19px 16px;
+  }
+}
+.pinpad__numbers-button {
+  background: linear-gradient(180deg, #414D66 0%, #161C27 100%);
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 0px 0px 3px rgba(211, 226, 255, 0.19), inset 0px 0px 5px 2px rgba(105, 136, 198, 0.3);
+  border-radius: 6px;
+  width: 71.05px;
+  height: 61.46px;
+  font-family: "Adobe Clean";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+}
+@media all and (min-width: 1000px) {
+  .pinpad__numbers-button {
+    width: 90px;
+    height: 78px;
+    font-size: 40px;
+  }
+}
+.pinpad__numbers-button.button-red {
+  background: linear-gradient(180deg, #EF6476 0%, #CF5060 100%);
+}
+.pinpad__numbers-button.button-green {
+  background: linear-gradient(180deg, #6AECB0 0%, #42A484 100%);
+}
+.pinpad__numbers-button:active {
+  background: linear-gradient(180deg, #7488B1 0%, #3F506E 100%);
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 1px 1px rgba(143, 165, 208, 0.5), inset 0px 1px 5px 2px rgba(48, 53, 65, 0.56);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 300px;
+  height: 380px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 35px;
+  font-family: "Adobe Clean";
+  font-style: normal;
+  color: #747474;
+  text-align: center;
+  background: #F0F0F0;
+  border: 2px solid #949494;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5), 0px 8px 16px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+@media all and (min-width: 1000px) {
+  .modal {
+    width: 834px;
+    height: 275px;
+  }
+}
+.modal__close-icon {
+  position: fixed;
+  top: 18px;
+  right: 16px;
+  font-size: 28px;
+  color: #747474;
+  border: none;
+  background-color: transparent;
+}
+.modal__title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+  padding-bottom: 16px;
+}
+.modal__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 5px;
+}/*# sourceMappingURL=index.css.map */

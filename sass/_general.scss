@@ -1,0 +1,40 @@
+@use 'variables';
+
+@font-face {
+    font-family: variables.$font-main;
+    src: url("../assets/AdobeClean-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: variables.$font-main;
+    font-weight: bold;
+    src: url('../assets/AdobeClean-Bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: variables.$font-main;
+    font-weight: medium;
+    src: url('../assets/AdobeClean-Medium.otf') format("opentype");
+}
+
+@font-face {
+    font-family: variables.$font-digitalDisplay;
+    src: url("../assets/ds-digital.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.background {
+    background-image: url(variables.$background-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
