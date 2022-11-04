@@ -54,7 +54,7 @@ function configDisplayForMessages(pinpad, text, isError) {
 
 // handles saving the PIN
 function savePin(pinpad) {
-  if (/^[0-9]+$/.test(pinpad.inputValue)) {
+  if (/^[0-9]+$/.test(pinpad.inputValue) && pinpad.inputValue.length == 6) {
     pinpad.secretPin = pinpad.inputValue;
     window.localStorage.setItem('secretPin', pinpad.inputValue);
     configDisplayForMessages(pinpad, 'SAVED', false);
@@ -64,8 +64,10 @@ function savePin(pinpad) {
       createModal(pinpad);
       handleDisplay(pinpad);
     }, 1500);
-  } else {
+  } else if (!/^[0-9]+$/.test(pinpad.inputValue)) {
     configDisplayForMessages(pinpad, 'NOT A NUMBER', true);
+  } else {
+    configDisplayForMessages(pinpad, 'ERROR', true);
   }
 }
 
